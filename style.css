@@ -1,0 +1,137 @@
+.sec-title{
+  margin: 10px;
+}
+#msg {
+  visibility: hidden;
+  color: red;
+  font-weight: normal;
+  font-size: .8rem;
+  font-family: Verdana;
+  animation: msg .5s infinite;
+}
+
+#msg::after{
+   content: "Recording.";
+    animation: msg 1s infinite;
+}
+
+@keyframes msg {
+  33%{
+    content: "Recording.";
+  }
+
+  66%{
+    content: "Recording..";
+  }
+
+  100%{
+    content: "Recording...";
+  }
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid grey;
+  font-size: 18px;
+  background: white;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#audio{
+  margin-right: 2.4rem;
+}
+
+.hidden{
+  display: none;
+}
+
+.btns{
+    margin:10px ;
+    display: flex;
+    justify-content: center;
+}
+
+
+.audio-controls button {
+  margin: 0px 5px;
+}
+canvas {
+  margin-top: 10px;
+  background-color: black;
+}
+
+
+
+ol{
+  font-size: 1rem;
+}
+
+
+
+hr.new4 {
+  border: .2px solid rgba(170, 170, 170, 0.397) !important;
+}
+
+
+
+#record,#stop {
+  box-shadow: 0 3px #172c4b;
+   border: none;
+}
+
+#submit_audio{
+   /* box-shadow: 0 5px #172c4b; */
+   border: none;
+  margin-left: 2rem !important;
+ 
+}
+
+#submit_audio:hover{
+  background-color: #3e8e41;
+  border: none;
+ 
+}
+#submit_audio:active{
+  box-shadow: 0 3px #172c4b;
+  transform: translateY(4px);
+}
+
+#record:hover{
+  background-color: #0897ff;
+}
+
+#stop:hover{
+   background-color: #b90505;
+}
+
+#record:active,#stop:active{
+  box-shadow: 0 1px #172c4b;
+  transform: translateY(4px);
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+#audio {
+    margin-right:0rem;
+}
+#reset{
+  display: block;
+}
+
+  .submit p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  #submit_audio{
+    margin: .7rem auto !important;
+  }
+ 
+} 
+
